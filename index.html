@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <audio autoplay="autopaly">
+    <audio autoplay="autopaly" id="play">
         <source src="music/love.mp3" type="audio/mp3" />
     </audio>
     <div id="main">
@@ -54,7 +54,7 @@
                 <span class="STYLE1"></span>
                 <!-- <div id="clock"></div> -->
             </div>
-            <canvas id="canvas" ></canvas>
+            <canvas id="canvas" width="1100px" height="680px" ></canvas>
         </div>
 
     </div>
@@ -126,6 +126,7 @@
                     canvas.unbind("mousemove");
                     canvas.removeClass('hand');
                 }
+                document.getElementById('play').play();
             }).mousemove(function (e) {
                 var offset = canvas.offset(), x, y;
                 x = e.pageX - offset.left;
